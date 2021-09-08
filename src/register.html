@@ -1,0 +1,110 @@
+<!--checked-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet"href="css/countrySelect.css">
+    <link rel="stylesheet" type="text/css" href="css/simple.css">
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/countrySelect.js"></script>
+    <script type="text/javascript">
+        function go_back() {
+            window.location.href="index.php";
+        }
+        //check email form
+        function v_email(f)
+        {
+                c1=f.value.indexOf("@")
+                c2=f.value.lastIndexOf(".")
+                if (c1<1||c2<2)
+                {
+                    alert("Wrong email!");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+        }
+        //fatal validation like empty variable is put in php
+        function v_form(f) {
+                if (v_email(f.email,"Not a valid e-mail address!")==false)
+                {
+                    f.email.focus();
+                    return false;
+                }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #CCCC33;
+        }
+    </style>
+</head>
+<body>
+<div class="container keep-away-from-top">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <form action="register.php" method="post" class="form-horizontal" onsubmit="return v_form(this);">
+                <span class="heading">Register</span>
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label A-font">UserName:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="username" class="form-control" id="Username" placeholder="UserName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="text-left col-sm-3 control-label A-font">PassWord:</label>
+                    <div class="col-sm-8">
+                        <input type="password" name="password" class="form-control" id="Password" placeholder="PassWord">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password2" class="col-sm-3 control-label A-font">Confirm:</label>
+                    <div class="col-sm-8">
+                        <input type="password" name="password2" class="form-control" id="Password2" placeholder="Confirm">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="passport" class="col-sm-3 control-label A-font">PassPort:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="passport" class="form-control" id="Passport" placeholder="PassPort">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="region" class="col-sm-3 control-label A-font">Region:</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="region" class="form-control" id="Region" placeholder="Region">
+                        <!-- using country select plugin  -->
+                        <script>$("#Region").countrySelect();</script>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="realname" class="col-sm-3 control-label A-font">RealName:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="realname" class="form-control" id="RealName" placeholder="RealName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Email" class="col-sm-3 control-label A-font">Email:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="email" class="form-control" id="Email" placeholder="example@xxx.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber" class="col-sm-3 control-label A-font">Phone:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="phone" class="form-control" id="Phone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="button"  name="back" value="back" class="keep-away-from-left btn-l btn-default btn-lg col-sm-3" onclick="go_back();">Back</button>
+                    <button type="submit"  name="register" value="Register" class="keep-away-from-left btn-l btn-default btn-lg col-sm-3">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

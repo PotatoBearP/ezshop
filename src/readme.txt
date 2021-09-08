@@ -1,0 +1,1 @@
+Differenrt php files are divided in to different role file accroding to their functionality.

@@ -1,0 +1,284 @@
+.form-bg{
+    background: #99CC99;
+}
+.form-horizontal{
+    background: #ffffff;
+    padding-bottom: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+.form-horizontal .heading{
+    color: #898901;
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 10px;
+}
+.form-horizontal .heading-admin{
+    color: #CC9933;
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 10px;
+}
+.form-horizontal .form-group{
+    padding: 0 40px;
+    margin: 0 0 25px 0;
+    position: relative;
+}
+.form-horizontal .form-control{
+    background: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    padding: 0 20px 0 45px;
+    height: 40px;
+    transition: all 0.3s ease 0s;
+}
+.form-horizontal .form-control:focus{
+    background: #e0e0e0;
+    box-shadow: none;
+    outline: 0 none;
+}
+.form-horizontal .form-group i{
+    position: absolute;
+    top: 12px;
+    left: 60px;
+    font-size: 17px;
+    color: #c8c8c8;
+    transition : all 0.5s ease 0s;
+}
+.form-horizontal .form-control:focus + i{
+    color: #CCCC33;
+}
+.form-horizontal .fa-question-circle{
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 60px;
+    font-size: 20px;
+    color: #808080;
+    transition: all 0.5s ease 0s;
+}
+.form-horizontal .fa-question-circle:hover{
+    color: #000;
+}
+.form-horizontal .main-checkbox{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #CCCC33;
+    border-radius: 50%;
+    position: relative;
+    margin: 5px 0 0 5px;
+    border: 2px solid #CCCC33;
+}
+.form-horizontal .main-checkbox label{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.form-horizontal .main-checkbox label:after{
+    content: "";
+    width: 10px;
+    height: 5px;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.form-horizontal .main-checkbox input[type=checkbox]{
+    visibility: hidden;
+}
+.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after{
+    opacity: 1;
+}
+.form-horizontal .text{
+    float: left;
+    margin-left: 7px;
+    line-height: 20px;
+    padding-top: 5px;
+    text-transform: capitalize;
+}
+.form-horizontal .main-radio{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #CC9933;
+    border-radius: 50%;
+    position: relative;
+    margin: 5px 0 0 5px;
+    border: 2px solid #CC9933;;
+}
+.form-horizontal .main-radio label{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.form-horizontal .main-radio label:after{
+    content:"";
+    width: 10px;
+    height: 5px;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.form-horizontal .main-radio input[type=radio]{
+    visibility: hidden;
+}
+.form-horizontal .main-radio input[type=radio]:checked + label:after{
+    opacity: 1;
+}
+.form-horizontal .btn{
+    float: right;
+    font-size: 20px;
+    color: #fff;
+    background: #CCCC33;
+    border-radius: 30px;
+    padding: 15px 30px;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.5s ease 0s;
+}
+.form-horizontal .btn-l{
+    float: left;
+    font-size: 20px;
+    color: #fff;
+    background: #CCCC33;
+    border-radius: 30px;
+    padding: 15px 30px;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.5s ease 0s;
+}
+.form-horizontal .tutorial{
+    text-align: left;
+    font-family: Tahoma,Arial;
+    font-size: 20px;
+    line-height: 22px;
+    color: #898901;
+    margin-left: 18%;
+    margin-top: 50px;
+}
+.form-horizontal .tutorial-admin{
+    text-align: left;
+    font-family: Tahoma,Arial;
+    font-size: 20px;
+    line-height: 22px;
+    color: #826121;
+    margin-left: 15%;
+    margin-top: 50px;
+}
+.form-horizontal .btn-admin{
+    float: right;
+    font-size: 20px;
+    color: #fff;
+    background: #CC9933;
+    border-radius: 30px;
+    padding: 15px 30px;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.5s ease 0s;
+}
+@media only screen and (max-width: 479px){
+    .form-horizontal .form-group{
+        padding: 0 25px;
+    }
+    .form-horizontal .form-group i{
+        left: 45px;
+    }
+    .form-horizontal .btn{
+        padding: 10px 20px;
+    }
+    .form-horizontal .btn-admin{
+        padding: 10px 20px;
+    }
+}
+.keep-away-from-top{
+    margin-top: 5%;
+}
+.System-title{
+    font-family: Tahoma,Arial;
+    font-size: 60px;
+    line-height: 22px;
+    color:#ffffff;
+    text-align: center;
+    margin-top: 5%;
+    width: 30%;
+    margin-left: 35%;
+}
+.A-font{
+    font-family: Tahoma,Arial;
+    font-size: 20px;
+    line-height: 22px;
+    color: #898901;
+}
+.A-font-admin{
+    font-family: Tahoma,Arial;
+    font-size: 20px;
+    line-height: 22px;
+    color: #826121;
+}
+.hint-admin{
+    font-family: Tahoma,Arial;
+    font-size: 18px;
+    line-height: 22px;
+    color: grey;
+}
+.ref{
+    font-weight: bold;
+    color: #ffffff;
+}
+.f{
+    float: left;
+ }
+.hint{
+    color:#ffffff;
+    margin-top: 40px;
+    text-align: center;
+}
+.admin{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.keep-away-from-left{
+    margin-left: 17%;
+}
+.keep-away-from-right{
+    margin-right: 5%;
+}
+.text-left{
+    text-align: left;
+}
+.keep-center{
+    margin-left: 40%;
+}
+.masks-disp{
+    width: 300px;
+    height: 300px;
+}
